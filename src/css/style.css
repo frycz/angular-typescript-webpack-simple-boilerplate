@@ -1,0 +1,37 @@
+body {
+  font-family: Arial, 'sans-serif';
+  text-align: center;
+  color: #333;
+}
+
+.chat-box {
+  width: 400px;
+  height:400px;
+  overflow-y: scroll;
+  border: 1px solid #ededed;
+  padding: 22px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.chat-box .message-box {
+  clear: both;
+  margin-bottom: 20px;
+}
+
+.chat-box .author-avatar-box {
+  float: left;
+}
+
+.chat-box .author-avatar img {
+  padding-right: 8px;
+}
+
+.chat-box .user-message-box input {
+  width: 400px
+}
+
+.chat-box .message-content {
+  margin-left: 38px;
+  margin-top: 5px;
+}
