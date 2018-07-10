@@ -19,6 +19,59 @@ body {
   margin-bottom: 20px;
 }
 
+.chat-box .author-avatar {
+  background-size: contain;
+}
+
+.avatar-1 {
+  background-image: url('../assets/img/avatar-1.png');
+}
+.avatar-2 {
+  background-image: url('../assets/img/avatar-2.png');
+}
+.avatar-3 {
+  background-image: url('../assets/img/avatar-3.png');
+}
+.avatar-4 {
+  background-image: url('../assets/img/avatar-4.png');
+}
+.avatar-5 {
+  background-image: url('../assets/img/avatar-5.png');
+}
+.avatar-6 {
+  background-image: url('../assets/img/avatar-6.png');
+}
+.avatar-7 {
+  background-image: url('../assets/img/avatar-7.png');
+}
+.avatar-8 {
+  background-image: url('../assets/img/avatar-8.png');
+}
+.avatar-9 {
+  background-image: url('../assets/img/avatar-9.png');
+}
+.avatar-10 {
+  background-image: url('../assets/img/avatar-10.png');
+}
+.avatar-11 {
+  background-image: url('../assets/img/avatar-11.png');
+}
+.avatar-12 {
+  background-image: url('../assets/img/avatar-12.png');
+}
+.avatar-13 {
+  background-image: url('../assets/img/avatar-13.png');
+}
+.avatar-14 {
+  background-image: url('../assets/img/avatar-14.png');
+}
+.avatar-15 {
+  background-image: url('../assets/img/avatar-15.png');
+}
+.user {
+  background-image: url('../assets/img/user.png');
+}
+
 .chat-box .author-avatar-box {
   float: left;
 }

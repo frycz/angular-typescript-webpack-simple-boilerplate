@@ -7,6 +7,8 @@ import { Observable }     from 'rxjs/Observable';
 
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 
+// import avatar01 from '../src/assets/img/avatar-1.png';
+
 @Component({
     selector: 'da-chat',
     template:   `<div>
@@ -15,7 +17,7 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
 
                             <div *ngFor="let message of messages; let i = index; trackBy: index" class="message-box">
                                 <div class="author-avatar-box">
-                                <span class="author-avatar"><img src="../src/assets/img/{{message.avatar}}" width="30" height="30"></span>
+                                <span class="author-avatar {{message.avatar}}" style="display: inline-block; width: 30px; height: 30px;"></span>
 
                                 </div>
                                 <div>
@@ -100,7 +102,7 @@ export class ChatComponent implements OnInit {
             this.messages.push({
                 content: message,
                 author: this.nick,
-                avatar: 'user.png',
+                avatar: 'user',
                 date: (new Date())
             });
             this.usermessage = null;
