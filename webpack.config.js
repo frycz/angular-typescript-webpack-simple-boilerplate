@@ -1,41 +1,27 @@
-var webpack = require('webpack'),
-    minimize = process.argv.indexOf('--minimize') !== -1,
-
-plugins = [
-  new webpack.optimize.CommonsChunkPlugin("vendor", "./dist/vendor.bundle.js")
-];
-
-if (minimize) {
-  plugins.push(new webpack.optimize.UglifyJsPlugin());
-}
+const path = require('path');
 
 module.exports = {
-  entry: {
-    "vendor": "./app/vendor",
-    "app": "./app/main"
-  },
-  output: {
-    path: __dirname,
-    filename: "./dist/[name].bundle.js"
-  },
-  resolve: {
-    extensions: ['', '.js', '.ts']
-  },
+  entry: './app/main.ts',
   module: {
-    preLoaders: [
+    rules: [
       {
-        test: /\.ts/,
-        loaders: ['tslint'],
+        test: /\.tsx?$/,
+        use: 'ts-loader',
         exclude: /node_modules/
-      }
-    ],
-    loaders: [
-      {
-        test: /\.ts/,
-        loaders: ['ts-loader'],
-        exclude: /node_modules/
+      },{
+        test: /\.css$/,
+        use: [
+          { loader: "style-loader" },
+          { loader: "css-loader" }
+        ]
       }
     ]
   },
-  plugins: plugins
+  resolve: {
+    extensions: [ '.tsx', '.ts', '.js' ]
+  },
+  output: {
+    filename: 'main.js',
+    path: path.resolve(__dirname, 'dist')
+  }
 };

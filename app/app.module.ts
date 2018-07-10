@@ -15,7 +15,7 @@ import { NickComponent }  from './nick.component';
 enableProdMode();
 
 @NgModule({
-    imports:        [
+    imports: [
         BrowserModule,
         FormsModule,
         HttpModule,
@@ -23,15 +23,14 @@ enableProdMode();
             { path: 'chat', component: ChatComponent, canActivate:[ChatGuard]},
             { path: '', component: NickComponent }
         ], { useHash: true })
-
     ],
     providers: [ChatGuard, CookieService],
-    declarations:   [
+    declarations: [
         AppComponent,
         NickComponent,
         ChatComponent
     ],
-    bootstrap:      [AppComponent]
+    bootstrap: [AppComponent]
 })
 
 export class AppModule {}

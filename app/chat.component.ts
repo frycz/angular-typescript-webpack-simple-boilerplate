@@ -94,8 +94,6 @@ export class ChatComponent implements OnInit {
         }
     }
 
-
-
     sendMessage(message) {
         if(message !== '') {
             this.usermessage = message;
