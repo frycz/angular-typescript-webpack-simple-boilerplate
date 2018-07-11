@@ -37,10 +37,3 @@ module.exports = {
     path: path.resolve(__dirname, 'dist')
   }
 };
-
-/**
-  change user email in git
-  dev prod webpack
-  readme
-  src -> assets
- */
