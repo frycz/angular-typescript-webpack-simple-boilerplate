@@ -1,5 +1,3 @@
-/// <reference path="../typings/index.d.ts" />
-
 import { Component, OnInit } from '@angular/core';
 import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
