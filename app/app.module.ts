@@ -3,10 +3,10 @@ import { FormsModule }   from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule }   from '@angular/router';
 import { enableProdMode } from '@angular/core';
-import { HttpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { ChatGuard } from './guards/chat.guard';
-import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { CookieService } from 'ngx-cookie-service';
 
 import { AppComponent }  from './app.component';
 import { ChatComponent }  from './chat.component';
@@ -18,7 +18,7 @@ enableProdMode();
     imports: [
         BrowserModule,
         FormsModule,
-        HttpModule,
+        HttpClientModule,
         RouterModule.forRoot([
             { path: 'chat', component: ChatComponent, canActivate:[ChatGuard]},
             { path: '', component: NickComponent }

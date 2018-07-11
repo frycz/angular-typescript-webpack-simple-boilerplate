@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 
 import { ChatGuard } from './guards/chat.guard';
 
-import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { CookieService } from 'ngx-cookie-service';
 
 @Component({
     selector: 'da-nick',
@@ -30,7 +30,7 @@ export class NickComponent {
 
     saveUser(nick) {
         if(nick !== '') {
-            this.cookieService.put('nick', nick);
+            this.cookieService.set('nick', nick);
             this.router.navigate(['./chat']);
         }
     }

@@ -2,10 +2,10 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Injectable, Inject } from '@angular/core';
-import { Http } from '@angular/http';
+import { HttpClient } from '@angular/common/http';
 import { Observable }     from 'rxjs/Observable';
 
-import { CookieService } from 'angular2-cookie/services/cookies.service';
+import { CookieService } from 'ngx-cookie-service';
 
 import audio from '../src/assets/sounds/incoming.mp3';
 import dbData from '../src/assets/data/messages.json';
@@ -46,7 +46,7 @@ export class ChatComponent implements OnInit {
     timeoutID: any;
     http: any;
 
-    constructor(cookieservice: CookieService, http: Http) {
+    constructor(cookieservice: CookieService, http: HttpClient) {
         this.http = http;
         this.nick = cookieservice.get('nick');
         this.items = [];
@@ -69,7 +69,6 @@ export class ChatComponent implements OnInit {
     getComments() {
         let _this = this;
         return _this.http.get(dbData)
-            .map(res => res.json())
             .subscribe(function(data){
                 _this.items = data;
                 _this.itemsCount = _this.items.length;
