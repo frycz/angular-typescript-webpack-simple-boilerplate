@@ -7,7 +7,8 @@ import { Observable }     from 'rxjs/Observable';
 
 import { CookieService } from 'angular2-cookie/services/cookies.service';
 
-// import avatar01 from '../src/assets/img/avatar-1.png';
+import audio from '../src/assets/sounds/incoming.mp3';
+import dbData from '../src/assets/data/messages.json';
 
 @Component({
     selector: 'da-chat',
@@ -49,7 +50,7 @@ export class ChatComponent implements OnInit {
         this.http = http;
         this.nick = cookieservice.get('nick');
         this.items = [];
-        this.sound = new Audio('../src/assets/sounds/incoming.mp3');
+        this.sound = new Audio(audio);
         this.messages = [];
     }
 
@@ -67,7 +68,7 @@ export class ChatComponent implements OnInit {
 
     getComments() {
         let _this = this;
-        return _this.http.get('../src/assets/data/messages.json')
+        return _this.http.get(dbData)
             .map(res => res.json())
             .subscribe(function(data){
                 _this.items = data;

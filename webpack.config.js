@@ -16,7 +16,8 @@ module.exports = {
           { loader: "css-loader" }
         ],
       },{
-        test: /\.png$/,
+        type: 'javascript/auto',
+        test: /\.png|mp3|json$/,
         use: [
           { loader: "file-loader" }
         ]
