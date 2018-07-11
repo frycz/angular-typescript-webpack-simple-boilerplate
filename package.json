@@ -4,9 +4,7 @@
   "description": "7njs",
   "scripts": {
     "build": "webpack --config webpack.config.js",
-    "buildProduction": "webpack --minimize",
     "start": "webpack-dev-server --port 9000",
-    "startProduction": "webpack-dev-server --minimize",
     "tslint": "tslint",
     "lint": "npm run tslint --force \"app/**/*.ts\""
   },
