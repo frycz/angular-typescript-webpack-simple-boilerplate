@@ -17,7 +17,3 @@ import { AppModule } from './app.module';
 import '../src/css/style.css';
 
 platformBrowserDynamic().bootstrapModule(AppModule);
-
-/**
-    - pack sound and images with webpack
-*/

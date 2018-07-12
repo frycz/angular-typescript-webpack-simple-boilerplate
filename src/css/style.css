@@ -23,6 +23,25 @@ body {
   background-size: contain;
 }
 
+.chat-box .author-avatar-box {
+  float: left;
+}
+
+.chat-box .author-avatar img {
+  padding-right: 8px;
+}
+
+.chat-box .user-message-box input {
+  width: 400px
+}
+
+.chat-box .message-content {
+  margin-left: 38px;
+  margin-top: 5px;
+}
+
+/* avatar classes */
+
 .avatar-1 {
   background-image: url('../assets/img/avatar-1.png');
 }
@@ -70,21 +89,4 @@ body {
 }
 .user {
   background-image: url('../assets/img/user.png');
-}
-
-.chat-box .author-avatar-box {
-  float: left;
-}
-
-.chat-box .author-avatar img {
-  padding-right: 8px;
-}
-
-.chat-box .user-message-box input {
-  width: 400px
-}
-
-.chat-box .message-content {
-  margin-left: 38px;
-  margin-top: 5px;
 }
