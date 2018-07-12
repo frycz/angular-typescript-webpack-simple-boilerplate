@@ -18,7 +18,7 @@ Simple chat application is built with
 - Webpack 4
 - Ts-lint
 
-##### Concepts you can learn:
+#### Concepts you can learn:
 - basics of typescript
 - basics of angular 6
 - webpack configuration
