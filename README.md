@@ -27,39 +27,22 @@ Simple chat application is built with
   - packing typescript, css, sound, png and json files into production directory
   - code minification for production
 - code linting
+
 ### Setup
 
 ```
 npm install
 npm start
 ```
-start browser with [http://localhost:9000](http://localhost:9000)
+The application will start automatically in your default browser.
 
 ### Other tasks
 
 
-build dev bundle
+build production bundle
 
 ```
 npm run build
-```
-
-build bundle for production
-
-```
-npm run buildProduction
-```
-
-run server
-
-```
-npm run start
-```
-
-run production server
-
-```
-npm run startProduction
 ```
 
 lint code

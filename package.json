@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "description": "7njs",
   "scripts": {
-    "build": "webpack --config webpack.config.js",
-    "start": "webpack-dev-server --port 9000",
-    "tslint": "tslint",
-    "lint": "npm run tslint --force \"app/**/*.ts\""
+    "start": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
+    "build": "webpack -p --progress --colors",
+    "lint": "tslint \"app/**/*.ts\" --force"
   },
   "license": "MIT",
   "dependencies": {
@@ -30,12 +29,14 @@
     "css-loader": "^1.0.0",
     "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.4.1",
     "style-loader": "^0.21.0",
     "ts-loader": "^4.4.2",
     "tslint": "^5.10.0",
     "tslint-loader": "^3.6.0",
     "typescript": "^2.9.2",
     "webpack": "^4.16.0",
+    "webpack-cleanup-plugin": "^0.5.1",
     "webpack-cli": "^3.0.8",
     "webpack-dev-server": "^3.1.4"
   }
