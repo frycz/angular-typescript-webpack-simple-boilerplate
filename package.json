@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "7njs",
   "scripts": {
-    "start": "webpack-dev-server --mode development --hot --progress --color --port 3000 --open",
-    "build": "webpack -p --progress --colors",
+    "start": "webpack-dev-server --mode development --open",
+    "build": "webpack --mode production",
     "lint": "tslint \"app/**/*.ts\" --force"
   },
   "license": "MIT",

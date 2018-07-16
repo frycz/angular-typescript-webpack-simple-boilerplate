@@ -1,54 +1,55 @@
-const webpack = require('webpack');
-const path = require('path');
-
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const WebpackCleanupPlugin = require('webpack-cleanup-plugin');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
-const IS_PRODUCTION = (
-  process.argv.indexOf('-p') >= 0
-  || process.env.NODE_ENV === 'production'
-);
+const HtmlWebPackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-  entry: './app/main.ts',
-  output: {
-    filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
-  },
+  /*
+
+    No entry and output paramters needed as webpack 4 provides basic default configuration
+    default entry: ./src/index.js
+    default output: ./dist/main.js
+
+    Webpack provides production and development mode.
+    In production mode code is minified by default.
+
+    "scripts": {
+      "dev": "webpack --mode development",
+      "build": "webpack --mode production"
+    }
+
+  */
   module: {
     rules: [
       {
+        // ts-loader transpiles typescript to javascript
+        // according to tsconfig.json configuration
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/
       },{
-        test: /\.css$/,
-        use: [
-          { loader: "style-loader" },
-          { loader: "css-loader" }
-        ],
-      },{
+        // loaders for images, sound and json
         type: 'javascript/auto',
         test: /\.png|mp3|json$/,
         use: [
           { loader: "file-loader" }
         ]
+      },{
+        test: /\.css$/,
+        // CSS is not minified by default.
+        // MiniCssExtractPlugin can be used to minify our code.
+        use: [MiniCssExtractPlugin.loader, "css-loader"]
       }
     ]
   },
   resolve: {
+    // indicate that typescript files (ts) should be handled as modules
     extensions: [ '.tsx', '.ts', '.js' ]
   },
-  optimization: {
-    minimizer: [
-      IS_PRODUCTION && new UglifyJsPlugin()
-    ].filter((x) => x)
-  },
   plugins: [
-    new WebpackCleanupPlugin(),
-    new HtmlWebpackPlugin({
+    // HtmlWebPackPlugin creates index.html file in ./dist directory.
+    // template parameter is not required - default template will be used
+    new HtmlWebPackPlugin({
       template: 'index.html'
     }),
-  ].filter((x) => x),
+    new MiniCssExtractPlugin(),
+  ]
 };

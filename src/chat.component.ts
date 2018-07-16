@@ -5,8 +5,8 @@ import { Observable }     from 'rxjs/Observable';
 
 import { CookieService } from 'ngx-cookie-service';
 
-import audio from '../src/assets/sounds/incoming.mp3';
-import dbData from '../src/assets/data/messages.json';
+import audio from './assets/sounds/incoming.mp3';
+import dbData from './assets/data/messages.json';
 
 @Component({
     selector: 'da-chat',

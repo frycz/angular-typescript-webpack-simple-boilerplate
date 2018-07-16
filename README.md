@@ -22,6 +22,7 @@ Simple chat application is built with
 - basics of typescript
 - basics of angular 6
 - webpack configuration
+  - using webpack 4 defaults
   - transpiling typescript to javascript
   - combining multiple files into one bundle
   - packing typescript, css, sound, png and json files into production directory

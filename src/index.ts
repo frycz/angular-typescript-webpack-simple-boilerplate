@@ -14,6 +14,6 @@ import '@angular/router';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app.module';
 
-import '../src/css/style.css';
+import './css/style.css';
 
 platformBrowserDynamic().bootstrapModule(AppModule);
