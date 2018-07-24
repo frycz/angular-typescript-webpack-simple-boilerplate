@@ -1,5 +1,8 @@
 # Simple front-end boilerplate with Typescript, Angular and Webpack
 "Chat" application presenting basic concepts of typescript, angular, webpack code transpilation and bundling. Ideal for educational purposes or very simple projects.
+
+[Live demo](https://frycz.github.io/angular-typescript-webpack-simple-boilerplate/)
+
 ### Details
 - a simple chat app
 - on first open, chat asks for user's name and only after that user can proceed
