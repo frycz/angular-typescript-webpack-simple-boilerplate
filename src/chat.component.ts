@@ -17,7 +17,6 @@ import dbData from './assets/data/messages.json';
                             <div *ngFor="let message of messages; let i = index; trackBy: index" class="message-box">
                                 <div class="author-avatar-box">
                                 <span class="author-avatar {{message.avatar}}" style="display: inline-block; width: 30px; height: 30px;"></span>
-
                                 </div>
                                 <div>
                                     <span class="author-nick">{{message.author}}, {{message.date | date: 'hh:mm:ss a'}}</span>

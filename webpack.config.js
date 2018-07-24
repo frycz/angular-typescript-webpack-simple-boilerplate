@@ -1,6 +1,6 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-
+var path = require('path');
 module.exports = {
   /*
 
@@ -17,6 +17,13 @@ module.exports = {
     }
 
   */
+ 
+  /*
+  output: {
+    publicPath: '/angular-typescript-webpack-simple-boilerplate/',
+    path: path.join(__dirname, 'dist')
+  },*/
+  
   module: {
     rules: [
       {
@@ -42,6 +49,9 @@ module.exports = {
   },
   resolve: {
     // indicate that typescript files (ts) should be handled as modules
+    alias: {
+      'app': path.join(__dirname, 'src')
+    },
     extensions: [ '.tsx', '.ts', '.js' ]
   },
   plugins: [

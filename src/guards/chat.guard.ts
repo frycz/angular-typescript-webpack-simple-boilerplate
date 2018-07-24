@@ -18,8 +18,7 @@ export class ChatGuard implements CanActivate{
     }
 
     private checkIfLoggedIn(): boolean{
-
-        if(typeof this.cookieService.get('nick') !== 'undefined') {
+        if(this.cookieService.get('nick')) {
             return true;
         } else {
             this.router.navigate(['./']);
