@@ -23,5 +23,7 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-    - name: Build the app
-      run: npm run build
+    - name: Install an dbuild
+      run: |
+        npm install
+        npm run build
